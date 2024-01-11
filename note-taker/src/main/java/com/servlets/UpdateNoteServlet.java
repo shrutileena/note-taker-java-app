@@ -1,6 +1,8 @@
 package com.servlets;
 
 import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,6 +35,7 @@ public class UpdateNoteServlet extends HttpServlet {
 			Note note = (Note) s.get(Note.class, id);
 			note.setTitle(title);
 			note.setContent(content);
+			note.setAddedDate(new Date());
 			s.update(note);
 			
 			t.commit();

@@ -38,6 +38,7 @@
 					<div class="card-body">
 						<h5 class="card-title"><%= note.getTitle() %></h5>
 						<p class="card-text"><%= note.getContent() %></p>
+						<p class="text-primary"><b><%= note.getAddedDate() %></b></p>
 						<a href="DeleteServlet?note_id=<%= note.getId() %>" class="btn btn-danger">Delete</a>
 						<a href="edit.jsp?noteid=<%= note.getId() %>" class="btn btn-primary">Update</a>
 					</div>
